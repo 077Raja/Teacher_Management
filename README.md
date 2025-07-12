@@ -1,3 +1,7 @@
+
+# Live On Render: https://teacher-management-llgr.onrender.com/
+# Loom demo Link : 
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -13,53 +17,44 @@ If you are developing a production application, we recommend using TypeScript wi
 # Teacher_Management
 
 Project Initialization Steps (Optional: Run before committing to GitHub)
+# Using Vite build tool
+Step 1: Navigate to the folder where you want to create the project and 
+open it in terminal
+Step 2: In the terminal of the application directory type the following 
+command.
+npm create vite@latest <<Application_name>>
+npm install tailwindcss @tailwindcss/vite
 
-bash
-npx create-next-app@latest my-next-app --typescript --tailwind
-cd my-next-app
-git init
+vite.config.ts
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
 
-📘 README.md File for the Repository
-# My Next.js App 🚀
+index.css
+@import "tailwindcss";
 
-A modern web application bootstrapped with **Next.js**, **TypeScript**, and **Tailwind CSS**.
-
-
-## 📦 Tech Stack
-
-- **Next.js** – The React framework for production
-- **TypeScript** – Strongly typed JavaScript
-- **Tailwind CSS** – Utility-first CSS framework for rapid UI development
-- **ESLint & Prettier** – Code quality and formatting tools
-
----
-
-## 🚀 Setup & Installation
-
-1. Install Dependencies
-Using npm:
-
-bash
+Step 3: Select the React Framework and then variant as JavaScript from 
+options.
+select javascript variant
+Step 4: Navigate to the newly created folder using the command.
+cd <<Application_name>>
+now, we can see the basic project structure show in below image.
+project structure
+Step 5: Use the below command in terminal to install all required 
+dependencies.
+npm install 
+ OR
+npm i
 npm install
-Or with yarn:
-
-bash
-yarn install
-2. Run the Development Server
-bash
+After successfully executing this command we can see a new folder named 
+“node_module” in the project folder which contains all the dependencies.
+node_modules
+Step 6: To run the application use the following command in terminal.
 npm run dev
-# or
-yarn dev
 Visit http://localhost:3000 to see the app running locally.
 
-📁 Project Structure
-/
-├── pages/               # Next.js pages (routes)
-│   └── index.tsx        # Main landing page
-├── components/          # Reusable React components
-├── styles/              # Global styles
-│   └── globals.css
-├── public/              # Static files
-├── tailwind.config.ts   # Tailwind configuration
-├── tsconfig.json        # TypeScript configuration
-└── next.config.js       # Next.js config
+
