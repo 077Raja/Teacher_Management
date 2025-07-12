@@ -20,12 +20,14 @@ Project Initialization Steps (Optional: Run before committing to GitHub)
 # Using Vite build tool
 Step 1: Navigate to the folder where you want to create the project and 
 open it in terminal
+
 Step 2: In the terminal of the application directory type the following 
 command.
+
 npm create vite@latest <<Application_name>>
 npm install tailwindcss @tailwindcss/vite
 
-vite.config.ts
+#.config.ts
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
@@ -34,25 +36,24 @@ export default defineConfig({
   ],
 })
 
-index.css
+#index.css
 @import "tailwindcss";
 
 Step 3: Select the React Framework and then variant as JavaScript from 
 options.
+
 select javascript variant
+
 Step 4: Navigate to the newly created folder using the command.
 cd <<Application_name>>
-now, we can see the basic project structure show in below image.
-project structure
+
 Step 5: Use the below command in terminal to install all required 
 dependencies.
 npm install 
  OR
 npm i
 npm install
-After successfully executing this command we can see a new folder named 
-“node_module” in the project folder which contains all the dependencies.
-node_modules
+
 Step 6: To run the application use the following command in terminal.
 npm run dev
 Visit http://localhost:3000 to see the app running locally.
